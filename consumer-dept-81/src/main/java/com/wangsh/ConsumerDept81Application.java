@@ -7,7 +7,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
 
 /**
- * 消费者
+ * 消费者，集成Ribbon后无需关心端口与URL，使用服务名调用微服务
  * 2021年3月2日 15:05:07
  */
 @SpringBootApplication
