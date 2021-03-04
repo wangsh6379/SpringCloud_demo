@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: application-config-eureka-client     #需要从github上读取的资源名称，注意没有yml后缀名
+      profile: test
+      label: master
+      uri: http://127.0.0.1:9011      #SpringCloudConfig获取的服务地址

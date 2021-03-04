@@ -1,0 +1,26 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: zull-gateway
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    instance-id: zull-gateway-9001
+    prefer-ip-address: true
+zuul:
+  prefix: /wangsh #设置统一前缀，否则无法访问
+  ignored-services: "*"   #设置全部微服务不可以以真正的名称访问。如果不设置可以用IP:PORT/前缀/微服务名称/接口 进行访问
+  routes:
+    mydept.id: provider-dept
+    mydept.serviceId: provider-dept #微服务名称
+    mydept.path: /mydept/** #指定的微服务名称映射为mydept  http://127.0.0.1:9001/wangsh/mydept/dept/get/1
+
+# 如何配置多个微服务映射，目前未成功
+#    mydept2.id: provider-dept2
+#    mydept2.seviceId: provider-dept2
+#    mydept2.path: /mydept2/**

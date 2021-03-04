@@ -1,0 +1,18 @@
+server:
+  port: 8088
+
+turbine:
+  app-config: provider-dept      # 需要监控的应用名称，基本上与微服务名称对应
+  cluster-name-expression: "'default'"
+
+spring:
+  application:
+    name: hystrix-turbine
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    instance-id: hystrix-turbine-8088
+    prefer-ip-address: true

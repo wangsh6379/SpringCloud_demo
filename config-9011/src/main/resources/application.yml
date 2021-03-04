@@ -1,0 +1,21 @@
+server:
+  port: 9011
+
+#spring:
+#  application:
+#    name:  wangsh-config
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: git@github.com:wangsh6379/springcloud_config.git #GitHub上面的git仓库名字
+spring:
+  application:
+    name: springcloud_config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/wangsh6379/springcloud_config.git
+#          username: wangsh6379
+#          password: hui8878616
