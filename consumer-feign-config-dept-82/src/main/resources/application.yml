@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: consumer-feign-config-dept-82
